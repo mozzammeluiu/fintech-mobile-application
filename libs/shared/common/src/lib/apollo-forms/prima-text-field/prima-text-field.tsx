@@ -9,18 +9,20 @@ export const PrimaTextField = ({
   defaultValue,
   name,
   rules,
+  id,
   ...restProps
 }: primaTextFieldProps) => {
-  console.log({ defaultValue });
   return (
     <View>
       <Controller
         control={control}
-        render={({ field: { onChange, onBlur, value } }) => (
+        render={({ field: { onChange, onBlur, value, ref } }) => (
           <PrimaTextInput
+            id={id}
             onChange={onChange}
             onBlur={onBlur}
             value={value}
+            ref={ref}
             {...restProps}
           />
         )}

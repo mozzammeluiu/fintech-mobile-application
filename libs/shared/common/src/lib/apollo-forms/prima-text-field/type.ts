@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import { TextInput as RNTextInput } from 'react-native-paper';
-// type RNTextInputProps = React.ComponentProps<typeof RNTextInput>;
+
 // export type PrimaTextInputProps = RNTextInputProps & {
 //   backgroundColor?: string;
 // };
 
 import { ChangeEvent, ReactNode } from 'react';
 import { Control, FieldValues, RegisterOptions } from 'react-hook-form';
-import { TextInputProps } from 'react-native-paper';
+import { TextInput as RNTextInput, TextInputProps } from 'react-native-paper';
+type RNTextInputProps = React.ComponentProps<typeof RNTextInput>;
 export type pickTextFieldProps = Pick<
   TextInputProps,
   | 'id'
@@ -37,7 +37,8 @@ export type pickTextFieldProps = Pick<
   | 'contentStyle'
   | 'outlineStyle'
   | 'underlineStyle'
->;
+> &
+  RNTextInputProps;
 
 export interface primaFormCommonFieldProps<
   TFieldValues extends FieldValues = FieldValues

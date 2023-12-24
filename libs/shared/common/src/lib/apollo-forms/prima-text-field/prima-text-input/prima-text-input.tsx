@@ -12,17 +12,18 @@ export const PrimaTextInput = forwardRef<RNTextInput, primaTextInputProps>(
       output,
       input,
       defaultValue,
+      mode = 'outlined',
+      label = '',
       ...restProps
     }: primaTextInputProps,
     ref
   ) => {
-    console.log('value', value);
     return (
       <TextInput
-        label="Email"
-        mode="outlined"
+        label={label}
+        mode={mode}
         onChangeText={(event) => onChange(output ? output(event) : event)}
-        value={input !== undefined ? input(value) : value}
+        value={input ? input(value) : value}
         ref={ref}
         {...restProps}
       />
