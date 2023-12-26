@@ -15,6 +15,8 @@ export const App = () => {
     <SafeAreaView>
       <PrimaMobileHeading text="Welcome Brio 👋" />
       <PrimaTextField
+        style={{ margin: 10 }}
+        outlineStyle={{ borderRadius: 16 }}
         id="username"
         testID="username"
         name="username"
@@ -28,6 +30,7 @@ export const App = () => {
         }}
       />
       <PrimaTextField
+        style={{ margin: 10 }}
         id="password"
         testID="password"
         name="password"
