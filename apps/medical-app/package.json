@@ -1,0 +1,21 @@
+{
+  "name": "medical-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@react-native/metro-config": "*",
+    "@testing-library/jest-native": "*",
+    "@testing-library/react-native": "*",
+    "metro-config": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-safe-area-context": "^4.8.2",
+    "react-native-screens": "^3.29.0",
+    "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "react-hook-form": "*",
+    "react-native-paper": "*"
+  }
+}
