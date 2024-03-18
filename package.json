@@ -2,7 +2,12 @@
   "name": "@fintech-mobile/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "run:brio:android":"npx nx run-android brio",
+    "run:brio:ios":"npx nx run-ios brio",
+    "watch-del": "watchman watch-del './' ; watchman watch-project './'",
+    "run:medical:app:android":"npx nx run-android medical-app"
+  },
   "private": true,
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
