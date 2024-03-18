@@ -17,7 +17,6 @@ export const PrimaTextField = ({
   ...restProps
 }: primaTextFieldProps) => {
   const messageId = `${id}-message`;
-  console.log(error, message, 'error message');
 
   return (
     <View>

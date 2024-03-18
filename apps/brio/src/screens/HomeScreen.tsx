@@ -10,7 +10,7 @@ export const HomeScreen = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data: any) => console.log(data);
   return (
     <View
       style={{
@@ -23,6 +23,9 @@ export const HomeScreen = () => {
       <PrimaMobileHeading text="Welcome Brio 👋" />
       <View style={{ width: '100%' }}>
         <PrimaTextField
+          autoComplete="off"
+          autoCapitalize="none"
+          autoCorrect={false}
           style={{ margin: 10 }}
           outlineStyle={{ borderRadius: 16, borderColor: '#d5d5d5' }}
           id="username"
