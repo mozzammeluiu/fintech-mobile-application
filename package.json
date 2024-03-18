@@ -6,7 +6,8 @@
     "run:brio:android":"npx nx run-android brio",
     "run:brio:ios":"npx nx run-ios brio",
     "watch-del": "watchman watch-del './' ; watchman watch-project './'",
-    "run:medical:app:android":"npx nx run-android medical-app"
+    "run:medical:app:android":"npx nx run-android medical-app",
+    "run:medical:app:ios":"npx nx run-ios brio"
   },
   "private": true,
   "dependencies": {

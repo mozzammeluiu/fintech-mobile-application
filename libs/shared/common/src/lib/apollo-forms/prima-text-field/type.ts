@@ -79,7 +79,7 @@ export interface primaFormCommonFieldProps<
 export interface primaTextProps extends pickTextFieldProps {}
 export interface primaTextInputProps
   extends primaTextProps,
-    Omit<primaFormCommonFieldProps, 'control'> {
+    Omit<primaFormCommonFieldProps, 'control'|'message'> {
   value?: any;
   defaultValue?: any;
   onChange: (event: any) => void;
@@ -92,9 +92,10 @@ export interface primaTextInputProps
 // };
 
 export interface primaTextFieldProps
-  extends primaFormCommonFieldProps,
+  extends Omit<primaFormCommonFieldProps,'message'>,
     Omit<primaTextProps, 'render'> {
   name: string;
   value?: any;
   defaultValue?: any;
+  message?: any;
 }
