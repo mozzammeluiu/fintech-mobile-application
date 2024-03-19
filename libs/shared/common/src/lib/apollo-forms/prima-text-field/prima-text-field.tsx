@@ -14,6 +14,7 @@ export const PrimaTextField = ({
   message,
   error,
   style,
+  secureTextEntry = false,
   ...restProps
 }: primaTextFieldProps) => {
   const messageId = `${id}-message`;
