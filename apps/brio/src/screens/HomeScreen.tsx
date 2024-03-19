@@ -28,6 +28,7 @@ export const HomeScreen = () => {
           testID="username"
           name="username"
           label="Username"
+          defaultValue={'mozzammel'}
           placeholder="Type Here"
           control={control}
           error={!!errors?.username}

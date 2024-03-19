@@ -30,7 +30,7 @@ export const PrimaTextField = ({
                 id={id}
                 onChange={onChange}
                 onBlur={onBlur}
-                value={value}
+                value={value || defaultValue}
                 ref={ref}
                 {...field}
                 {...restProps}
@@ -44,7 +44,6 @@ export const PrimaTextField = ({
           );
         }}
         name={name}
-        defaultValue={defaultValue || undefined}
         rules={rules}
         {...restProps}
       />
