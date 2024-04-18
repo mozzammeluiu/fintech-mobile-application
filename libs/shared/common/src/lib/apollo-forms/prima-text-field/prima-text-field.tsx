@@ -14,7 +14,7 @@ export const PrimaTextField = ({
   message,
   error,
   style,
-  secureTextEntry = false,
+  // secureTextEntry = false,
   ...restProps
 }: primaTextFieldProps) => {
   const messageId = `${id}-message`;
@@ -32,6 +32,7 @@ export const PrimaTextField = ({
                 onBlur={onBlur}
                 value={value || defaultValue}
                 ref={ref}
+                // secureTextEntry={secureTextEntry}
                 {...field}
                 {...restProps}
               />

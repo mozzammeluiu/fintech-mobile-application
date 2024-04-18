@@ -5,9 +5,12 @@ import {
 } from '@fintech/shared/common/components';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import FastImage from 'react-native-fast-image';
+import { useTheme } from 'react-native-paper';
 
 export const HomeScreen = () => {
+  const theme = useTheme();
   const {
     control,
     handleSubmit,
@@ -15,8 +18,19 @@ export const HomeScreen = () => {
   } = useForm();
   const onSubmit = (data: any) => console.log(data);
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: theme.colors.primary }]}>
       <PrimaMobileHeading text="Welcome Brio 👋" />
+      {/* <View style={{ borderRadius: 999 }}> */}
+      <FastImage
+        style={{ width: 100, height: 100, borderRadius: 999 }}
+        source={{
+          uri: 'https://unsplash.it/400/400?image=1',
+          // headers: { Authorization: 'someAuthToken' },
+          priority: FastImage.priority.normal,
+        }}
+        resizeMode={FastImage.resizeMode.contain}
+      />
+      {/* </View> */}
       <View style={{ width: '100%', marginHorizontal: 20 }}>
         <PrimaTextField
           autoComplete="off"
@@ -27,8 +41,10 @@ export const HomeScreen = () => {
           id="username"
           testID="username"
           name="username"
-          label="Username"
-          defaultValue={'mozzammel'}
+          label={
+            <Text style={{ color: theme.colors.secondary }}>Username</Text>
+          }
+          // defaultValue={'mozzammel'}
           placeholder="Type Here"
           control={control}
           error={!!errors?.username}
@@ -46,9 +62,11 @@ export const HomeScreen = () => {
           id="password"
           testID="password"
           name="password"
-          label="Password"
+          label={
+            <Text style={{ color: theme.colors.secondary }}>Password</Text>
+          }
           placeholder="Type Here"
-          secureTextEntry={true}
+          secureTextEntry
           returnKeyType="done"
           keyboardType="phone-pad"
           control={control}
